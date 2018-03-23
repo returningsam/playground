@@ -464,7 +464,7 @@ function handleTogglePreview(ev) {
 /*************************** PREVIEW NAVIGATION *******************************/
 /******************************************************************************/
 
-const BASE_GITHUB_LINK = "https://github.com/returningsam/website-of-mine/tree/master/public/playground/";
+const BASE_GITHUB_LINK = "https://github.com/returningsam/playground/tree/master/";
 
 function previewButtonHandler(ev) {
     var targToks = ev.target.id.split("_");
