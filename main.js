@@ -81,12 +81,12 @@ var pgData = {
         mobile: false,
         description: "Draws a random zig-zag line that goes around the mouse and connects at the other side."
     },
-    "3D_text": {
-        date: "20.01.2018",
-        tags: ["interactive","text","3D"],
-        mobile: false,
-        description: "3D text using html text elements, css transforms, and some vanilla javascript (no 3D graphics libraries). Click to get new text."
-    },
+    // "3D_text": {
+    //     date: "20.01.2018",
+    //     tags: ["interactive","text","3D"],
+    //     mobile: false,
+    //     description: "3D text using html text elements, css transforms, and some vanilla javascript (no 3D graphics libraries). Click to get new text."
+    // },
     "corner_site": {
         date: "01.02.2018",
         tags: ["interactive","3D"],
