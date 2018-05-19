@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family:"Riccione-Xlight";
+    src:url("../fonts/ricciones-xl_TALK.woff2") format("woff2"),url("../fonts/ricciones-xl_TALK.woff") format("woff"),url("../fonts/ricciones-xl_TALK.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    transform-origin: center;
+    top: 50%;
+    left: 50%;
+    font-family: 'Riccione-Xlight', 'Times New Roman', times, serif;
+    font-size: 6.5vw;
+    font-weight: normal;
+    /* -webkit-font-smoothing: antialiased; */
+    text-rendering: optimizeSpeed;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+            color: black;
+            text-align: center;
+}
+
+canvas {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: black;
+    /* filter: url("#liquid");
+    -webkit-filter: url("#liquid");
+    -moz-filter: url("#liquid");
+    -o-filter: url("#liquid"); */
+}
+
+canvas.hidden {
+    display: none;
+}
+
+svg {
+    max-height: 0;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}

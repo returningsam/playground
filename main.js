@@ -104,6 +104,12 @@ var pgData = {
         tags: ["interactive","canvas","lines"],
         mobile: true,
         description: "Draws really long random line while (optionally) filling in some parts to create a random doodle. Variables that control the behavior of the line are randomized when you click."
+    },
+    "gravity_lines": {
+        date: "18.05.2018",
+        tags: ["interactive","canvas","lines","physics","random"],
+        mobile: false,
+        description: "Generates a wonderful web of moving and interconnecting lines. Hidden circles, attracted to each other by a simulated gravitational force, are connected by the white lines being animated in this experiment."
     }
 }
 
