@@ -231,6 +231,8 @@ function startWet() {
     }
     document.getElementById("canvas").classList.remove("hidden");
     wetEnabled = true;
+    renderCircles();
+    wetEl.addEventListener("mousemove",handleWetMouseMove);
 }
 
 function handleWetMouseMove(ev) {
@@ -253,10 +255,7 @@ function stopWet() {
 
 function initWet() {
     wetEl = document.body;
-    wetEl.addEventListener("mouseenter",startWet);
-    wetEl.addEventListener("mousemove",handleWetMouseMove);
-    wetEl.addEventListener("mouseout",stopWet);
-    renderCircles();
+    startWet();
 }
 
 function initCanvas() {
