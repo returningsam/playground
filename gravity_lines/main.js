@@ -223,15 +223,23 @@ function renderCircles() {
 }
 
 function startWet() {
-    wetSrc = {
-        x: width / 2,
-        y: height / 2
+    if (!wetSrc) {
+        wetSrc = {
+            x: width / 2,
+            y: height / 2
+        }
     }
     document.getElementById("canvas").classList.remove("hidden");
     wetEnabled = true;
 }
 
 function handleWetMouseMove(ev) {
+    if (!wetSrc) {
+        wetSrc = {
+            x: width / 2,
+            y: height / 2
+        }
+    }
     wetSrc.x = ev.clientX;
     wetSrc.y = ev.clientY;
     if (wetEnabled && chance.bool({liklihood: 0.99})) {
