@@ -248,9 +248,6 @@ function initWet() {
     wetEl.addEventListener("mouseenter",startWet);
     wetEl.addEventListener("mousemove",handleWetMouseMove);
     wetEl.addEventListener("mouseout",stopWet);
-    document.body.addEventListener("click",function () {
-        slow = !slow;
-    })
     renderCircles();
 }
 
