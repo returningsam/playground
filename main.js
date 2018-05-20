@@ -109,7 +109,7 @@ var pgData = {
         date: "20.05.2018",
         tags: ["interactive","canvas","lines","physics","random"],
         mobile: false,
-        description: "Generates a wonderful web of moving and interconnecting lines. The circles are attracted to each other by a simulated gravitational force, and are connected by the white lines to show the gravitional forces."
+        description: "The circles are attracted to each other by a simulated gravitational force, and are connected by the white lines to show the gravitional forces."
     }
 }
 
