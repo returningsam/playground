@@ -52,7 +52,7 @@ function getVector(x,y,r,d){
 /******************************************************************************/
 
 const CANV_RATIO = 0.9;
-const MAX_GRAV_DIST = 100;
+const GRAV_DIST_MULT = 2.5;
 
 var canvas;
 var context;
@@ -102,18 +102,25 @@ class Circle {
         var ctrl = 100;
         this.x += this.vx/5;
         this.y += this.vy/5;
+        var rad2ed = Math.pow(this.r,2);
 
+        // sort circles by distance to current circle
+        var temp_circles = JSON.parse(JSON.stringify(circles))
+            .sort((a,b) => (getDist(this.x,this.y,a.x,a.y) -
+                            getDist(this.x,this.y,b.x,b.y)));
         // apply gravity
-        for (var i = 0; i < circles.length; i++) {
-            var b = circles[i];
+        for (var i = 0; i < temp_circles.length; i++) {
+            var b = temp_circles[i];
             if (this.equals(b)) continue;
             var d = getDist(this.x,this.y,b.x,b.y);
-            const maxDist = this.r + b.r * 2;
+            const maxDist = this.r + b.r * GRAV_DIST_MULT;
+            var brad2 = Math.pow(b.r,2);
             if (d < maxDist) {
-                var mult = ((maxDist-d)/maxDist * 0.05)+0.001;
-                this.vx += ((b.x - this.x) * mult * (Math.pow(b.r / this.r,2)/this.r));
-                this.vy += ((b.y - this.y) * mult * (Math.pow(b.r / this.r,2)/this.r));
+                var mult = ((maxDist-d)/maxDist * 0.005)+0.001;
+                this.vx += ((b.x - this.x) * mult * (brad2 / rad2ed));
+                this.vy += ((b.y - this.y) * mult * (brad2 / rad2ed));
             }
+            else return;
         }
     }
 }
@@ -132,7 +139,7 @@ function newCurve(sx,sy,c1x,c1y,c2x,c2y,fx,fy) {
 
 function drawConnection(x1,y1,rad1, x2,y2,rad2) {
     const d = getDist(x1,y1,x2,y2);
-    const maxDist = rad1 + rad2 * 2;
+    const maxDist = rad1 + rad2 * GRAV_DIST_MULT;
     if (rad1 === 0 || rad2 === 0 || d > maxDist) return;
 
     // Generate the connector path
