@@ -1,10 +1,3 @@
-
-@font-face {
-    font-family:"Riccione-Xlight";
-    src:url("../fonts/ricciones-xl_TALK.woff2") format("woff2"),url("../fonts/ricciones-xl_TALK.woff") format("woff"),url("../fonts/ricciones-xl_TALK.otf") format("opentype");
-    font-style:normal;font-weight:400;
-}
-
 html, body {
     padding: 0;
     margin: 0;
@@ -14,26 +7,13 @@ html, body {
 }
 
 p {
-
-    padding: 0;
-    margin: 0;
     position: fixed;
-    transform-origin: center;
-    top: 50%;
-    left: 50%;
-    font-family: 'Riccione-Xlight', 'Times New Roman', times, serif;
-    font-size: 6.5vw;
-    font-weight: normal;
-    /* -webkit-font-smoothing: antialiased; */
-    text-rendering: optimizeSpeed;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-            color: black;
-            text-align: center;
+    bottom: 0;
+    right: 0;
+    color: rgb(52, 52, 52);
+    font-family: monospace;
+    padding: 20px;
+    margin: 0;
 }
 
 canvas {
