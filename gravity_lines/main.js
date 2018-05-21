@@ -51,7 +51,7 @@ function getVector(x,y,r,d){
 /************************** WET ***********************************************/
 /******************************************************************************/
 
-const CANV_RATIO = 0.9;
+const CANV_RATIO = 0.8;
 const GRAV_DIST_MULT = 2.5;
 
 var canvas;
@@ -105,7 +105,8 @@ class Circle {
         var rad2ed = Math.pow(this.r,2);
 
         // sort circles by distance to current circle
-        var temp_circles = JSON.parse(JSON.stringify(circles))
+
+        var temp_circles = circles.slice()
             .sort((a,b) => (getDist(this.x,this.y,a.x,a.y) -
                             getDist(this.x,this.y,b.x,b.y)));
         // apply gravity
@@ -116,7 +117,7 @@ class Circle {
             const maxDist = this.r + b.r * GRAV_DIST_MULT;
             var brad2 = Math.pow(b.r,2);
             if (d < maxDist) {
-                var mult = ((maxDist-d)/maxDist * 0.005)+0.001;
+                var mult = Math.pow((maxDist-d)/maxDist,2) * 0.01;
                 this.vx += ((b.x - this.x) * mult * (brad2 / rad2ed));
                 this.vy += ((b.y - this.y) * mult * (brad2 / rad2ed));
             }
