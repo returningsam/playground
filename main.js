@@ -110,6 +110,12 @@ var pgData = {
         tags: ["interactive","canvas","lines","physics","random"],
         mobile: false,
         description: "The circles are attracted to each other by a simulated gravitational force, and are connected by the white lines to show the gravitional forces."
+    },
+    "inverted_texts": {
+        date: "09.06.2018",
+        tags: ["interactive","text","simple"],
+        mobile: false,
+        description: "Layred inverted text to create interesting patterns."
     }
 }
 
