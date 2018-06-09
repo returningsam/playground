@@ -1,0 +1,28 @@
+:root {
+    --f-size: 10vw;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: 'BioRhyme Expanded', serif;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    position: fixed;
+    font-size: var(--f-size);
+    transform-origin: center;
+    color: white;
+    mix-blend-mode: difference;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    /* writing-mode: tb-rl; */
+    word-wrap: break-word;
+    width: calc(var(--f-size) * 3);
+    line-height: var(--f-size);
+}
