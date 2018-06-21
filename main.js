@@ -115,7 +115,7 @@ var pgData = {
         date: "09.06.2018",
         tags: ["interactive","text","simple"],
         mobile: false,
-        description: "Layred inverted text to create interesting patterns."
+        description: "Layered inverted text to create interesting patterns."
     }
 }
 
