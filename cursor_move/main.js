@@ -89,8 +89,8 @@ function resize() {
 
 function init() {
     initCanv();
-    // writeText("HELLO");
-    drawImage("./img.jpg");
+    writeText("HELLO HELLO");
+    // drawImage("./img.jpg");
     canv.addEventListener("mousemove",handleMouseMove);
     // setInterval(updateDrawing, 10);
 }
