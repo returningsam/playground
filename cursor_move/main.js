@@ -1,6 +1,6 @@
 const CANV_RATIO = 1;
 const FONT_SIZE  = 250 * CANV_RATIO;
-const NUM_ROWS   = 5;
+const NUM_ROWS   = 10;
 var canv;
 var ctx;
 
@@ -64,7 +64,7 @@ function writeText(text) {
 }
 
 function drawImage(link) {
-    var image = new Image(100,100);
+    var image = new Image();
     image.src = link;
     image.onload = function () {
         console.log(image);
@@ -89,7 +89,8 @@ function resize() {
 
 function init() {
     initCanv();
-    writeText("HELLO");
+    // writeText("HELLO");
+    drawImage("./img.jpg");
     canv.addEventListener("mousemove",handleMouseMove);
     // setInterval(updateDrawing, 10);
 }
