@@ -84,12 +84,12 @@ function initCanv() {
 
 function resize() {
     initCanv();
-    drawImage("https://media.licdn.com/dms/image/C4E03AQHvTFsfTMDqsg/profile-displayphoto-shrink_200_200/0?e=1530338400&v=beta&t=4v3tfNo0Or8XSYpGJwJXaLPn30FNVmUqUelGHfneyjA");
+    drawImage("./img.jpg");
 }
 
 function init() {
     initCanv();
-    drawImage("https://media.licdn.com/dms/image/C4E03AQHvTFsfTMDqsg/profile-displayphoto-shrink_200_200/0?e=1530338400&v=beta&t=4v3tfNo0Or8XSYpGJwJXaLPn30FNVmUqUelGHfneyjA");
+    drawImage("./img.jpg");
     canv.addEventListener("mousemove",handleMouseMove);
     // setInterval(updateDrawing, 10);
 }
