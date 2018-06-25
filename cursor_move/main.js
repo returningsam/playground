@@ -137,8 +137,7 @@ function updateDrawingY() {
 }
 
 function writeLine(line,text_dy,bump) {
-    if (bump) ctx.fillText(line, (canvas.width/2), (canvas.height/2) + (FONT_SIZE/4) + (text_dy*FONT_SIZE/2));
-    else ctx.fillText(line, (canvas.width/2), (canvas.height/2) + (text_dy*FONT_SIZE/2));
+    ctx.fillText(line, (canvas.width/2), (canvas.height/2) + (FONT_SIZE/4) + (text_dy*FONT_SIZE/2));
 }
 
 function writeText() {
