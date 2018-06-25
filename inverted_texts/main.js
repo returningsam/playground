@@ -33,7 +33,7 @@ function updateTexts() {
         for (var j = Math.floor(NUM_ROWS/-2); j <= Math.ceil(NUM_ROWS/2); j++) {
             var text = document.getElementById(i + "_" + j);
             text.style.top  = ((window.innerHeight/2) - (text.clientHeight/2) + (j * 5 * Y_DIFF)) + "px";
-            text.style.left = ((window.innerWidth/2) - (text.clientWidth/2) + (i  * 5 * X_DIFF))  + "px";
+            text.style.left = ((window.innerWidth/2) - (text.clientWidth/2) + (i * 5 * X_DIFF))  + "px";
             text.style.transform = "rotateZ(" + ((i*X_DIFF) + (j*Y_DIFF)) + "deg)"
         }
     }
@@ -48,9 +48,8 @@ function init() {
             // text.style.color = chance.color();
             // text.style.fontSize = ((Math.abs(i) + Math.abs(j)) * 5) + "rem";
             document.body.appendChild(text);
-            text.style.top  = ((window.innerHeight/2) - (text.clientHeight/2) + (j * Y_DIFF)) + "px";
-            text.style.left = ((window.innerWidth/2) - (text.clientWidth/2) + (i * X_DIFF))  + "px";
-            text.style.transform = "rotateZ(" + ((2*(i*X_DIFF)) + (2*(j*Y_DIFF))) + "deg)"
+            text.style.top  = ((window.innerHeight/2) - (text.clientHeight/2)) + "px";
+            text.style.left = ((window.innerWidth/2)  - (text.clientWidth/2))  + "px";
         }
     }
     document.body.addEventListener("mousemove",updateMousePos);
