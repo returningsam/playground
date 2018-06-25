@@ -64,7 +64,7 @@ function writeText(text) {
 }
 
 function drawImage(link) {
-    var image = new Image();
+    var image = new Image(100,100);
     image.src = link;
     image.onload = function () {
         console.log(image);
