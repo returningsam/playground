@@ -144,7 +144,7 @@ function writeText() {
     // check text size
     var longest = 0;
     for (var i = 0; i < the_text.length; i++) if (the_text[i].length > longest) longest = the_text[i].length;
-    FONT_SIZE = Math.min((canv.width*1.45) / longest,(canv.height)/(the_text.length*1.4));
+    FONT_SIZE = Math.min((canv.width*1.4) / longest,(canv.height)/(the_text.length*1.4));
 
     ctx.font = "800 " + FONT_SIZE + "px Open Sans";
 
