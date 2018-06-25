@@ -1,6 +1,6 @@
 const CANV_RATIO = 1;
 const FONT_SIZE  = 250 * CANV_RATIO;
-const NUM_ROWS   = 10;
+const NUM_ROWS   = 5;
 var canv;
 var ctx;
 
