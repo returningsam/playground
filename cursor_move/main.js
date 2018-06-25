@@ -1,6 +1,6 @@
 const CANV_RATIO = 1;
-const FONT_SIZE  = 250 * CANV_RATIO;
-const NUM_ROWS   = 10;
+const FONT_SIZE  = 150 * CANV_RATIO;
+const NUM_ROWS   = 2;
 var canv;
 var ctx;
 
@@ -25,11 +25,11 @@ function handleMouseMove(ev) {
         mouse_y = ev.clientY;
     }
     else {
-        dx = ev.clientX - mouse_x;
+        dx += ev.clientX - mouse_x;
         mouse_x = ev.clientX;
         mouse_y = ev.clientY;
     }
-    updateDrawing();
+    // updateDrawing();
 }
 
 function updateDrawing() {
@@ -41,14 +41,14 @@ function updateDrawing() {
             var coord = indToCoord(i);
             var cur_x = coord[0];
             var new_x = cur_x + dx;
-            if (new_x >= 0 && new_x < canv.width) {
+            if (new_x >= 0 && new_x < canv.width && curImgData.data[i+3] > 0) {
                 var new_ind = coordToInd(new_x,cur_y);
                 nxtImgData.data[new_ind]   = curImgData.data[i];
                 nxtImgData.data[new_ind+1] = curImgData.data[i+1];
                 nxtImgData.data[new_ind+2] = curImgData.data[i+2];
                 nxtImgData.data[new_ind+3] = curImgData.data[i+3];
             }
-            else {
+            else if (curImgData.data[i+3] > 0) {
                 nxtImgData.data[new_ind]   = 0;
                 nxtImgData.data[new_ind+1] = 0;
                 nxtImgData.data[new_ind+2] = 0;
@@ -57,10 +57,11 @@ function updateDrawing() {
         }
     }
     ctx.putImageData(nxtImgData,0,0);
+    dx = 0;
 }
 
-function writeText(text) {
-    ctx.fillText(text, (canvas.width/2), (canvas.height/2) + (FONT_SIZE/4));
+function writeText(text,dy) {
+    ctx.fillText(text, (canvas.width/2), (canvas.height/2) + (FONT_SIZE/4) + (dy*FONT_SIZE/2));
 }
 
 function drawImage(link) {
@@ -89,10 +90,11 @@ function resize() {
 
 function init() {
     initCanv();
-    writeText("XYZ123");
+    writeText("THIS IS NOT",-1);
+    writeText("BROKEN.",1);
     // drawImage("./img.jpg");
     canv.addEventListener("mousemove",handleMouseMove);
-    // setInterval(updateDrawing, 10);
+    setInterval(updateDrawing, 1);
 }
 
 window.onload = init;
