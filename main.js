@@ -118,7 +118,7 @@ var pgData = {
         description: "Layered inverted text to create interesting patterns."
     },
     "pixel_shift": {
-        date: "09.25.2018",
+        date: "25.06.2018",
         tags: ["interactive","text","simple","lines"],
         mobile: false,
         description: "Use your mouse to glitch out the text. I've added some controls to this one, so play around!"
