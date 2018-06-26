@@ -195,8 +195,19 @@ function changeDir(ev) {
 }
 
 function download(ev) {
-    var url = canv.toDataURL('image/png');
-    this.href = url;
+    var curImgData = ctx.getImageData(0,0,canv.width,canv.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0,0,canv.width,canv.height);
+    ctx.putImageData(curImgData,0,0);
+    setTimeout(function () {
+        var url = canv.toDataURL('image/png');
+        this.href = url;
+        setTimeout(function () {
+            ctx.clearRect(0,0,canv.width,canv.height);
+            ctx.putImageData(curImgData,0,0);
+            ctx.fillStyle = "black";
+        }, 10);
+    }, 10);
 };
 
 function reset() {
