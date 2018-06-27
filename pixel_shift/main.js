@@ -199,14 +199,12 @@ function download(ev) {
     ctx.fillStyle = "white";
     ctx.fillRect(0,0,canv.width,canv.height);
     ctx.putImageData(curImgData,0,0);
+    var url = canv.toDataURL('image/png');
+    this.href = url;
     setTimeout(function () {
-        var url = canv.toDataURL('image/png');
-        this.href = url;
-        setTimeout(function () {
-            ctx.clearRect(0,0,canv.width,canv.height);
-            ctx.putImageData(curImgData,0,0);
-            ctx.fillStyle = "black";
-        }, 10);
+        ctx.clearRect(0,0,canv.width,canv.height);
+        ctx.putImageData(curImgData,0,0);
+        ctx.fillStyle = "black";
     }, 10);
 };
 
