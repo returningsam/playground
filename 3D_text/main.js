@@ -121,7 +121,7 @@ function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
     DIFF_Z       = 10;
-    NUM_TEXTS    = SIZES.length;
+    NUM_TEXTS    = SIZES.length-1;
     TEXT_CONTENT = "TYPE WHAT YOU WANT";//randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);
