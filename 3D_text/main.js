@@ -120,7 +120,7 @@ function removeTexts() {
 function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
-    DIFF_Z       = 10;
+    DIFF_Z       = 7;
     NUM_TEXTS    = SIZES.length-1;
     TEXT_CONTENT = "TYPE WHAT YOU WANT";//randString((1,2));
     curInitText = 0;
