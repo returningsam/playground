@@ -67,7 +67,7 @@ var curInitText = 0;
 var numPerIter = 3;
 var initTextsInterval;
 
-function initTexts(callBack) {
+function initTexts() {
     var colorStep = 255/(NUM_TEXTS+1);
 
     var textEl = document.createElement("p");
@@ -118,8 +118,8 @@ function removeTexts() {
 function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
-    DIFF_Z       = 30;
-    NUM_TEXTS    = randInt(10,20);
+    DIFF_Z       = 50;
+    NUM_TEXTS    = 5;
     TEXT_CONTENT = randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);
