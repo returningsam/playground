@@ -227,7 +227,7 @@ function initCanv() {
     ctx.textAlign = "center";
     ctx.font = "800 " + FONT_SIZE + "px Open Sans";
     ctx.fillRect(0,0,canv.width,canv.height);
-    ctx.fillStyle = "black"; 
+    ctx.fillStyle = "black";
 }
 
 function init() {
