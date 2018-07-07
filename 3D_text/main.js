@@ -119,7 +119,7 @@ function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
     DIFF_Z       = 3;
-    NUM_TEXTS    = randInt(100,200);
+    NUM_TEXTS    = randInt(10,20);
     TEXT_CONTENT = randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);

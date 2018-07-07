@@ -223,9 +223,11 @@ function initCanv() {
     ctx = canv.getContext("2d");
     canv.width  = window.innerWidth  * CANV_RATIO;
     canv.height = window.innerHeight * CANV_RATIO;
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.font = "800 " + FONT_SIZE + "px Open Sans";
+    ctx.fillRect(0,0,canv.width,canv.height);
+    ctx.fillStyle = "black"; 
 }
 
 function init() {
