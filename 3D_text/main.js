@@ -12,6 +12,8 @@ var percY;
 var xMed = window.innerWidth/2;
 var yMed = window.innerHeight/2;
 
+const SIZES = [300,400,600,700,800];
+
 function randInt(min, max) {
     return chance.integer({min:min,max:max});
 }
@@ -74,7 +76,7 @@ function initTexts() {
     textEl.innerHTML = TEXT_CONTENT;
     var curColorVal = (colorStep * (curInitText+1)).toFixed(0);
     var curColor = "rgba(" + curColorVal + "," + curColorVal + "," + curColorVal + ",1) !important";
-    textEl.style = "color: " + curColor + ";font-weight: " + (curInitText*100);
+    textEl.style = "color: " + curColor + ";font-weight: " + (SIZES[curInitText));
     // textEl = setSkew(textEl,curInitText);
     document.getElementById("textCont").appendChild(textEl);
     curInitText++;
@@ -119,7 +121,7 @@ function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
     DIFF_Z       = 10;
-    NUM_TEXTS    = 10;
+    NUM_TEXTS    = SIZES.length;
     TEXT_CONTENT = randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);
