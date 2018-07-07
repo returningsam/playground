@@ -74,7 +74,7 @@ function initTexts() {
     textEl.innerHTML = TEXT_CONTENT;
     var curColorVal = (colorStep * (curInitText+1)).toFixed(0);
     var curColor = "rgba(" + curColorVal + "," + curColorVal + "," + curColorVal + ",1) !important";
-    textEl.style = "color: " + curColor + ";";
+    textEl.style = "color: " + curColor + ";font-weight: " + curColorVal;
     // textEl = setSkew(textEl,curInitText);
     document.getElementById("textCont").appendChild(textEl);
     curInitText++;
@@ -118,8 +118,8 @@ function removeTexts() {
 function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
-    DIFF_Z       = 50;
-    NUM_TEXTS    = 5;
+    DIFF_Z       = 20;
+    NUM_TEXTS    = 10;
     TEXT_CONTENT = randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);
