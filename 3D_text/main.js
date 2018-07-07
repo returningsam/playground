@@ -12,7 +12,7 @@ var percY;
 var xMed = window.innerWidth/2;
 var yMed = window.innerHeight/2;
 
-const SIZES = [300,400,600,700,800];
+const SIZES = [100,300,400,500,700,900];
 
 function randInt(min, max) {
     return chance.integer({min:min,max:max});
