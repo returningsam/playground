@@ -169,8 +169,6 @@ function drawImage(link) {
     }
 }
 
-
-
 const dirs = ["horizontal","vertical","both"];
 
 function changeDir(ev) {
