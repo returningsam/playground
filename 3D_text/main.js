@@ -118,7 +118,7 @@ function removeTexts() {
 function redraw() {
     if (initTextsInterval) clearInterval(initTextsInterval);
     if (updateInterval) clearInterval(updateInterval);
-    DIFF_Z       = 3;
+    DIFF_Z       = 30;
     NUM_TEXTS    = randInt(10,20);
     TEXT_CONTENT = randString((1,2));
     curInitText = 0;
