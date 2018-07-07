@@ -76,7 +76,7 @@ function initTexts() {
     textEl.innerHTML = TEXT_CONTENT;
     var curColorVal = (colorStep * (curInitText+1)).toFixed(0);
     var curColor = "rgba(" + curColorVal + "," + curColorVal + "," + curColorVal + ",1) !important";
-    textEl.style = "color: " + curColor + ";font-weight: " + (SIZES[SIZES.length - curInitText]);
+    textEl.style = "color: " + curColor + ";font-weight: " + (SIZES[SIZES.length - (curInitText+2)]);
     // textEl = setSkew(textEl,curInitText);
     document.getElementById("textCont").appendChild(textEl);
     curInitText++;
@@ -122,7 +122,7 @@ function redraw() {
     if (updateInterval) clearInterval(updateInterval);
     DIFF_Z       = 10;
     NUM_TEXTS    = SIZES.length;
-    TEXT_CONTENT = "HELLO";//randString((1,2));
+    TEXT_CONTENT = "TYPE WHAT YOU WANT";//randString((1,2));
     curInitText = 0;
     console.log("DIFF_Z:       " + DIFF_Z);
     console.log("NUM_TEXTS:    " + NUM_TEXTS);
