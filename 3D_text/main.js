@@ -76,7 +76,7 @@ function initTexts() {
     textEl.innerHTML = TEXT_CONTENT;
     var curColorVal = (colorStep * (curInitText+1)).toFixed(0);
     var curColor = "rgba(" + curColorVal + "," + curColorVal + "," + curColorVal + ",1) !important";
-    textEl.style = "color: " + curColor + ";font-weight: " + (SIZES[SIZES.length - (curInitText+2)]);
+    textEl.style = "color: " + curColor + ";font-weight: " + (SIZES[SIZES.length - (curInitText+1)]);
     // textEl = setSkew(textEl,curInitText);
     document.getElementById("textCont").appendChild(textEl);
     curInitText++;
