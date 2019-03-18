@@ -123,24 +123,24 @@ var pgData = {
         mobile: true,
         description: "A dynamic poster design. Simplex noise is used to generate a fluid 'ribbon' that decorates a short saying."
     },
-    // "gpu_particles": {    /// NEED PREVIEW
-    //     date: "29.12.2018",
-    //     tags: ["gpu","particles","interactive","text","lines","canvas","random"],
-    //     mobile: false,
-    //     description: "A custom particle system powered by gpu.js. Create text with the particles and swoosh them around with your mouse!"
-    // },
-    // "gpu_particles": {    /// NEED PREVIEW
-    //     date: "29.12.2018",
-    //     tags: ["particles","lines","canvas","random"],
-    //     mobile: false,
-    //     description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
-    // },
-    // "cracked_text": {     /// NEED PREVIEW
-    //     date: "15.03.2019",
-    //     tags: ["interactive","text","lines","canvas","random"],
-    //     mobile: false,
-    //     description: "Generative text that consists of random polygons. Resebles cracked and dry ground or ice. Controls!"
-    // }
+    "gpu_particles": {
+        date: "29.12.2018",
+        tags: ["gpu","particles","interactive","text","lines","canvas","random"],
+        mobile: false,
+        description: "A custom particle system powered by gpu.js. Create text with the particles and swoosh them around with your mouse!"
+    },
+    "flock_noise": {
+        date: "29.12.2018",
+        tags: ["particles","lines","canvas","random"],
+        mobile: true,
+        description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
+    },
+    "cracked_text": {
+        date: "15.03.2019",
+        tags: ["interactive","text","lines","canvas","random"],
+        mobile: false,
+        description: "Generative text that consists of random polygons. Resembles dry clay or cracked ice. Controls!"
+    }
 }
 
 var pgDataArr;

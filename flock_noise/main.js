@@ -1,7 +1,7 @@
 const SECOND = 60;
-const RES_SCALE  = 1;
+const RES_SCALE  = 1.5;
 const SEED       = Date.now();
-const START_NUM  = 10000;
+const START_NUM  = 5000;
 const LINE_WIDTH = 1*RES_SCALE;
 
 var canv, ctx;
