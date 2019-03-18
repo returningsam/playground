@@ -130,7 +130,7 @@ var pgData = {
         description: "A custom particle system powered by gpu.js. Create text with the particles and swoosh them around with your mouse!"
     },
     "flock_noise": {
-        date: "29.12.2018",
+        date: "23.01.2018",
         tags: ["particles","lines","canvas","random"],
         mobile: true,
         description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
