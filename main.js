@@ -135,6 +135,12 @@ var pgData = {
         mobile: true,
         description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
     },
+    "danish_shade": {
+        date: "04.03.2019",
+        tags: ["3D","color","canvas","random","simple"],
+        mobile: true,
+        description: "An expieriment aimed at emulating the fluid movements of jellyfish in forms inspired by some of Louis Poulsen's lampshade designs."
+    },
     "cracked_text": {
         date: "15.03.2019",
         tags: ["interactive","text","lines","canvas","random"],
