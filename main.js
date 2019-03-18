@@ -75,12 +75,6 @@ var pgData = {
         description: "One of my earlier experiments. Draws random 'stick-figure' trees with shading to create a sense of depth.",
         bgPos: "bottom center"
     },
-    "static_lines": {
-        date: "12.01.2018",
-        tags: ["simple","canvas","lines"],
-        mobile: false,
-        description: "Draws a random zig-zag line that goes around the mouse and connects at the other side."
-    },
     "3D_text": {
         date: "20.01.2018",
         tags: ["interactive","text","3D"],
@@ -92,12 +86,6 @@ var pgData = {
         tags: ["interactive","3D"],
         mobile: false,
         description: "A website in a corner. Move the mouse around to view the two sides of the corner."
-    },
-    "blob_thing": {
-        date: "07.02.2018",
-        tags: ["interactive","canvas"],
-        mobile: true,
-        description: "Draws a ungulating blob around the mouse."
     },
     "doodle_bot": {
         date: "08.02.2018",
@@ -122,7 +110,37 @@ var pgData = {
         tags: ["interactive","text","lines"],
         mobile: false,
         description: "Use your mouse to glitch out the text. I've added some controls to this one, so play around!"
-    }
+    },
+    "for_spin_studios": {
+        date: "20.08.2018",
+        tags: ["interactive","text","lines","canvas","color"],
+        mobile: false,
+        description: "Layers of text that move based on mouse position. Use the controls to change colors and other parameters. Inspired by a design created by Spin Studios."
+    },
+    "dynamic_poster": {
+        date: "12.11.2018",
+        tags: ["text","color","canvas","random"],
+        mobile: true,
+        description: "A dynamic poster design. Simplex noise is used to generate a fluid 'ribbon' that decorates a short saying."
+    },
+    // "gpu_particles": {    /// NEED PREVIEW
+    //     date: "29.12.2018",
+    //     tags: ["gpu","particles","interactive","text","lines","canvas","random"],
+    //     mobile: false,
+    //     description: "A custom particle system powered by gpu.js. Create text with the particles and swoosh them around with your mouse!"
+    // },
+    // "gpu_particles": {    /// NEED PREVIEW
+    //     date: "29.12.2018",
+    //     tags: ["particles","lines","canvas","random"],
+    //     mobile: false,
+    //     description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
+    // },
+    // "cracked_text": {     /// NEED PREVIEW
+    //     date: "15.03.2019",
+    //     tags: ["interactive","text","lines","canvas","random"],
+    //     mobile: false,
+    //     description: "Generative text that consists of random polygons. Resebles cracked and dry ground or ice. Controls!"
+    // }
 }
 
 var pgDataArr;
