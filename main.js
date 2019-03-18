@@ -130,7 +130,7 @@ var pgData = {
         description: "A custom particle system powered by gpu.js. Create text with the particles and swoosh them around with your mouse!"
     },
     "flock_noise": {
-        date: "23.01.2019",
+        date: "07.02.2019",
         tags: ["particles","lines","canvas","random"],
         mobile: true,
         description: "Particles that flock together and leave trails as they move. Randomness is added to their momvements to seem more lifelike."
@@ -146,6 +146,12 @@ var pgData = {
         tags: ["interactive","text","lines","canvas","random"],
         mobile: false,
         description: "Generative text that consists of random polygons. Resembles dry clay or cracked ice. Controls!"
+    },
+    "peg_face": {
+        date: "22.01.2019",
+        tags: ["interactive","camera","3D","cv"],
+        mobile: false,
+        description: "Uses clmTrackr.js to find landmarks on your face and realtime and renders them to 3D objects in the scene."
     }
 }
 
