@@ -7,16 +7,3 @@ html, body, canvas {
     width: 100%;
     overflow: hidden;
 }
-
-.loadFont {
-    font-family: Inter;
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-}
-
-#svg_draw {
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-}

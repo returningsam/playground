@@ -6,7 +6,6 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="chance.min.js" charset="utf-8"></script>
-    <script src="perlinNoise.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73703405-1"></script>
@@ -18,14 +17,6 @@
 </head>
 <body>
     <canvas id="canvas"></canvas>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-            <filter id="liquid">
-                <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur" />
-                <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -5"/>
-            </filter>
-        </defs>
-    </svg>
     <!-- <p>hold "control" and move your mouse around or click to create circles</p> -->
 </body>
 </html>

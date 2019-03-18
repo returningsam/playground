@@ -25,8 +25,6 @@ var config = {
     TEXT:                "ICE"
 }
 
-var svgDraw;
-
 var canv, ctx;
 var simplex;
 
@@ -484,14 +482,6 @@ function animate() {
     animationLoopID = requestAnimationFrame(animate);
 }
 
-function exportSVG() {
-    svgDraw.clear(); // hopefully this clears the svg canvas
-
-    for (var i = 0; i < tiles.length; i++) {
-        tiles[i].drawSVGPoly();
-    }
-}
-
 function handleMouseMove(ev) {
     let x = ev.clientX*RES_RATIO;
     let y = ev.clientY*RES_RATIO;
@@ -545,11 +535,6 @@ function finishFontLoad() {
 
 function loadFont() {
     console.log("loading font");
-    // WebFont.load({
-    //     custom: {families: ["Inter"]},
-    //     urls: ["style.css"],
-    //     active: finishFontLoad
-    // });
     let fface = new FontFace('Inter', 'url("./Inter-Bold.ttf")');
     document.fonts.add(fface);
     fface.load().then(finishFontLoad);
@@ -589,8 +574,6 @@ function init() {
     window.addEventListener("mousemove",handleMouseMove);
     window.addEventListener("mousedown",handleMouseDown);
     window.addEventListener("mouseup",handleMouseUp);
-
-    svgDraw = SVG('svg_draw').size(window.innerWidth, window.innerHeight);
 }
 
 window.onload = init;
