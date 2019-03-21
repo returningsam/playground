@@ -152,6 +152,12 @@ var pgData = {
         tags: ["interactive","camera","3D","cv"],
         mobile: false,
         description: "Uses clmTrackr.js to find landmarks on your face and realtime and renders them to 3D objects in the scene."
+    },
+    "camera_dust": {
+        date: "20.03.2019",
+        tags: ["interactive","camera","liens","cv"],
+        mobile: true,
+        description: "Move around and watch little dust particles fall off of you."
     }
 }
 
