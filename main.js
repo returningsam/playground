@@ -155,7 +155,7 @@ var pgData = {
     },
     "camera_dust": {
         date: "20.03.2019",
-        tags: ["interactive","camera","liens","cv"],
+        tags: ["interactive","camera","lines","cv"],
         mobile: true,
         description: "Move around and watch little dust particles fall off of you."
     }
