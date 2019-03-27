@@ -160,10 +160,10 @@ var pgData = {
         description: "Move around and watch little dust particles fall off of you."
     },
     "cv_particles": {
-        date: "20.26.2019",
+        date: "26.03.2019",
         tags: ["interactive","camera","lines","cv"],
         mobile: false,
-        description: "A particle system you can interact with using your camera! Uses OpenCV.js to compute optical flow in real time in the browser."
+        description: "A particle system you can interact with using your camera! Uses OpenCV.js to compute optical flow in real time in the browser. USE CHROME ONLY!!"
     }
 }
 
