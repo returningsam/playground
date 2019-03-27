@@ -8,8 +8,8 @@ var config =  {
     NUM_PARTS:     20000,
     ADD_PER_FRAME: 5000,
     SHAPE:         "line",
-    SPRING:        true,
-    PART_MASS:     .1
+    SPRING:        false,
+    SPRING_AMT:     .1
 }
 
 var canv, ctx, camVideo;
@@ -89,7 +89,7 @@ function fillParts() {
             chance.floating({min:0,max:canv.width}),
             chance.floating({min:0,max:canv.height}),
             0,0, // u,v
-            config.PART_MASS,   // mass
+            config.SPRING_AMT,   // mass
             0,0, // gravit x,y
             0,canv.width,
             0,canv.height
@@ -304,7 +304,7 @@ function initGUI() {
     videoOpacGui.onFinishChange(updateCamElement);
     gui.add(config,"SHAPE", ["line", "dot"]);
     gui.add(config,"SPRING");
-    let partMassGui = gui.add(config,"PART_MASS", 0, 2);
+    let partMassGui = gui.add(config,"SPRING_AMT", 0, 2);
     partMassGui.onFinishChange(initParts);
 }
 
